@@ -74,6 +74,12 @@ void max_heap_sort(int *arr, int size);
  */
 int *top_k_heap(int* arr,int size,int k);
 
+/**
+ * 层序遍历
+ * @param heap 待遍历的堆
+ */
+void max_heap_order(MaxHeap* heap);
+
 
 // 内部使用的辅助函数
 void _max_heapify_up(MaxHeap *heap, int index);

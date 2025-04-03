@@ -216,3 +216,13 @@ int *top_k_heap(int *arr, int size, int k)
     free(max.heaparr);
     return res;
 }
+
+void max_heap_order(MaxHeap *heap)
+{
+    if(!heap) return;
+    for(int i = 0; i < heap->size ; i ++)
+    {
+        printf("%d \t",heap->heaparr[i]);
+    }
+    printf("\n");
+}

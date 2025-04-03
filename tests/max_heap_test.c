@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <assert.h>
 #include <limits.h>
+#include <stdlib.h>
 #include "src/max_heap.h"
 
 void test_heap_operations() {
@@ -15,6 +16,7 @@ void test_heap_operations() {
     for (int i = 0; i < 8; i++) {
         assert(max_heap_insert(heap, test_data[i]) == 1);
     }
+    max_heap_order(heap);
     assert(max_heap_size(heap) == 8);
     assert(max_heap_peek(heap) == 9);
 
@@ -52,11 +54,12 @@ void test_top_k_heap(){
     int size = sizeof(arr)/sizeof(arr[0]);
     int expected[] = { 1, 1,2,3};
 
-    int *res = top_k_heap(arr,8,4) ;
+    int *res = top_k_heap(arr,size,4) ;
 
     for (int i = 0; i < 4; i++) {
         assert(res[i] == expected[i]);
     }
+    free(res);
 }
 
 int main() {
