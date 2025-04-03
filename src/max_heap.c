@@ -130,22 +130,24 @@ void _max_heapify_down(MaxHeap *heap, int index)
 {
     if (!heap)
         return;
-    while ((_left(index) < heap->size && heap->heaparr[_left(index)] > heap->heaparr[index]) || (_right(index) < heap->size && heap->heaparr[_right(index)] > heap->heaparr[index]))
+    while (1)
     {
-        if (_right(index) < heap->size && heap->heaparr[_right(index)] > heap->heaparr[_left(index)])
-        {
-            int temp = heap->heaparr[_right(index)];
-            heap->heaparr[_right(index)] = heap->heaparr[index];
-            heap->heaparr[index] = temp;
-            index = _right(index);
-        }
-        else
-        {
-            int temp = heap->heaparr[_left(index)];
-            heap->heaparr[_left(index)] = heap->heaparr[index];
-            heap->heaparr[index] = temp;
-            index = _left(index);
-        }
+        int largest = index;
+        int left = _left(index);
+        int right = _right(index);
+
+        if (left < heap->size && heap->heaparr[left] > heap->heaparr[largest])
+            largest = left;
+        if (right < heap->size && heap->heaparr[right] > heap->heaparr[largest])
+            largest = right;
+        if (largest == index)
+            break;
+
+        // 交换元素
+        int temp = heap->heaparr[index];
+        heap->heaparr[index] = heap->heaparr[largest];
+        heap->heaparr[largest] = temp;
+        index = largest;
     }
 }
 
