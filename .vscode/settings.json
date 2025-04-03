@@ -1,0 +1,8 @@
+{
+    "C_Cpp.default.configurationProvider": "mesonbuild.mesonbuild",
+    "C_Cpp.default.compileCommands": "/home/dxq/treebuild/builddir/compile_commands.json",
+    "files.associations": {
+        "binary_tree.h": "c",
+        "limits.h": "c"
+    }
+}

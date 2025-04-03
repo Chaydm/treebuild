@@ -1,0 +1,38 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "meson build",
+            "type": "shell",
+            "command": "meson",
+            "args": [
+                "setup",
+                "--buildtype=debug",
+                "builddir"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "meson compile",
+            "type": "shell",
+            "command": "meson",
+            "args": [
+                "compile",
+                "-C",
+                "builddir"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": "build",
+            "problemMatcher": []
+        }
+    ]
+}

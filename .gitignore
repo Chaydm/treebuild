@@ -1,0 +1,34 @@
+# Build directories
+builddir/
+build/
+
+# Compiled object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Precompiled headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Temp files
+*.swp
+*~
