@@ -39,8 +39,8 @@ int abt_length(ArrayBinaryTree *abt)
     int length = 0;
     for (int i = 0; i < abt->size; i++)
     {
-        if(abt_val(abt,i)!= INT_MAX)
-            length ++ ;
+        if (abt_val(abt, i) != INT_MAX)
+            length++;
     }
     return length;
 }
@@ -135,11 +135,11 @@ int *abt_postOrder(ArrayBinaryTree *abt, int *returnSize)
 {
     if (!abt || !returnSize)
         return NULL;
-    int *arr = (int *)malloc(abt_length(abt)* sizeof(int));
+    int *arr = (int *)malloc(abt_length(abt) * sizeof(int));
     if (!arr)
         return NULL;
     int index = 0;
     abt_dfs(abt, 0, "post", arr, &index);
-    *returnSize = index ;
+    *returnSize = index;
     return arr;
 }

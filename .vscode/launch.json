@@ -73,5 +73,17 @@
             "externalConsole": false,
             "MIMode": "gdb",
         },
+        {
+            "name": "debug arr_graph_test",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/builddir/arr_graph_test",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+        },
     ]
 }
